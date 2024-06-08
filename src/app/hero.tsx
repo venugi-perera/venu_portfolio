@@ -11,14 +11,12 @@ function Hero() {
           <Typography
             variant="h1"
             color="blue-gray"
-            className="mb-4 lg:text-5xl !leading-tight text-3xl"
-          >
+            className="mb-4 lg:text-5xl !leading-tight text-3xl" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}          >
             Welcome to my Web <br /> Development Portofolio!
           </Typography>
           <Typography
             variant="lead"
-            className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
-          >
+            className="mb-4 !text-gray-500 md:pr-16 xl:pr-28" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}          >
             I&apos;m Venugi Perera, a passionate web developer based in Sri Lanka. Here,
             you&apos;ll get a glimpse of my journey in the world of web
             development, where creativity meets functionality.
@@ -26,14 +24,13 @@ function Hero() {
           <div className="grid">
             <Typography
               variant="small"
-              className="mb-2 text-gray-900 font-medium"
-            >
+              className="mb-2 text-gray-900 font-medium" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}            >
               Your email
             </Typography>
             <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
               {/* @ts-ignore */}
               <Input color="gray" label="Enter your email" size="lg" />
-              <Button color="gray" className="w-full px-4 md:w-[12rem]">
+              <Button color="gray" className="w-full px-4 md:w-[12rem]" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                 require offer
               </Button>
             </div>

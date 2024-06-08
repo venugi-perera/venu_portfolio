@@ -53,13 +53,12 @@ export function Skills() {
   return (
     <section id="skills" className="px-8 py-16"> {/* Added mt-10 for a top margin of 10 */}
       <div className="container mx-auto mb-20  mt-10 text-center">
-        <Typography variant="h1" color="blue-gray" className="m-1">
+        <Typography variant="h1" color="blue-gray" className="m-1" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
           What I do
         </Typography>
         <Typography
           variant="lead"
-          className="mx-auto w-full !text-gray-500 lg:w-10/12"
-        >
+          className="mx-auto w-full !text-gray-500 lg:w-10/12" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        >
           I&apos;m not just a developer; I&apos;m a digital dreamweaver.
           Crafting immersive online experiences is not just a job but my
           calling. Discover below how I can help you.
