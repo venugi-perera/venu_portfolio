@@ -6,9 +6,9 @@ import {
   PuzzlePieceIcon,
   CursorArrowRaysIcon,
   ArrowRightIcon,
+  DocumentArrowDownIcon,
 } from "@heroicons/react/24/solid";
 import { ResumeItem } from "@/components";
-import { useState } from "react";
 
 const RESUME_ITEMS = [
   {
@@ -26,12 +26,12 @@ const RESUME_ITEMS = [
 ];
 
 export function Resume() {
-
   const handleClick = () => {
     window.open('/image/venugi_perera.pdf', '_blank');
   };
+
   return (
-    <section className="px-8 py-24">
+    <section id="resume" className="px-8 py-24 bg-gray-50">
       <div className="container mx-auto grid w-full grid-cols-1 items-center gap-16 lg:grid-cols-2">
         <div className="col-span-1">
           <Typography variant="h2" color="blue-gray">
@@ -42,18 +42,30 @@ export function Resume() {
             experience in crafting visually stunning and functionally robust
             websites and web applications.
           </Typography>
-          <Button
-            variant="text"
-            color="gray"
-            className="flex items-center gap-2"
-            onClick={handleClick}
-          >
-            view more
-            <ArrowRightIcon
-              strokeWidth={3}
-              className="h-3.5 w-3.5 text-gray-900"
-            />
-          </Button>
+          <div className="flex space-x-4 mt-6">
+            <Button
+              variant="filled"
+              color="blue"
+              className="flex items-center gap-2"
+              onClick={handleClick}
+            >
+              <ArrowRightIcon
+                strokeWidth={3}
+                className="h-5 w-5 text-white"
+              />
+              View more
+            </Button>
+            <a href="/image/venugi_perera.pdf" download="Venugi Perera - Resume">
+              <Button
+                variant="filled"
+                color="blue"
+                className="flex items-center gap-2"
+              >
+                <DocumentArrowDownIcon className="h-5 w-5 text-white" />
+                Download CV
+              </Button>
+            </a>
+          </div>
         </div>
         <div className="col-span-1 grid gap-y-6 lg:ml-auto pr-0 lg:pr-12 xl:pr-32">
           {RESUME_ITEMS.map((props, idx) => (

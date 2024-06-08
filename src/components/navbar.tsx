@@ -15,37 +15,26 @@ import {
   Bars3Icon,
 } from "@heroicons/react/24/solid";
 
-// Adjusted paths for the NAV_MENU
 const NAV_MENU = [
-  {
-    name: "Page",
-    icon: RectangleStackIcon,
-    href: "/page",
-  },
-  {
-    name: "Account",
-    icon: UserCircleIcon,
-    href: "/account",
-  },
-  {
-    name: "Docs",
-    icon: CommandLineIcon,
-    href: "/app/testimonial",
-  },
   {
     name: "Project",
     icon: Squares2X2Icon,
-    href: "/components/projects",
+    href: "#projects",
   },
   {
     name: "Resume",
     icon: UserCircleIcon,
-    href: "/#resume",
+    href: "#resume",
   },
   {
     name: "Skills",
     icon: CommandLineIcon,
-    href: "/skill-card",
+    href: "#skills",
+  },
+  {
+    name: "Contact",
+    icon: Bars3Icon,
+    href: "#contact",
   },
 ];
 
@@ -60,6 +49,7 @@ function NavItem({ children, href }: NavItemProps) {
       <Typography
         as="a"
         href={href || "#"}
+        // target={href ? "_blank" : "_self"}
         variant="paragraph"
         color="gray"
         className="flex items-center gap-2 font-medium text-gray-900"
@@ -93,18 +83,6 @@ export function Navbar() {
             </NavItem>
           ))}
         </ul>
-        <IconButton
-          variant="text"
-          color="gray"
-          onClick={handleOpen}
-          className="ml-auto inline-block lg:hidden"
-        >
-          {open ? (
-            <XMarkIcon strokeWidth={2} className="h-6 w-6" />
-          ) : (
-            <Bars3Icon strokeWidth={2} className="h-6 w-6" />
-          )}
-        </IconButton>
       </div>
       <Collapse open={open}>
         <div className="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">

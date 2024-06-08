@@ -51,11 +51,8 @@ const SKILLS = [
 
 export function Skills() {
   return (
-    <section className="px-8 mt-10"> {/* Added mt-10 for a top margin of 10 */}
-      <div className="container mx-auto mb-20 text-center">
-        {/* <Typography color="blue-gray" className="mb-2 font-bold uppercase">
-          my skills
-        </Typography> */}
+    <section id="skills" className="px-8 py-16"> {/* Added mt-10 for a top margin of 10 */}
+      <div className="container mx-auto mb-20  mt-10 text-center">
         <Typography variant="h1" color="blue-gray" className="m-1">
           What I do
         </Typography>
